@@ -25,7 +25,7 @@ export const PageContent = () => {
     return (
         <Content className={'content container'}>
             {
-                menuIndex === 2 ?
+                +menuIndex === 2 ?
                 <Tabs defaultActiveKey="1" onChange={callback} size={'large'}>
                     <TabPane tab="Глобальные объявления" key="1">
                         <GeneralNotesTab />

@@ -76,6 +76,6 @@
 }
 
 label {
-    color: #676DAA;
+    color: #676DAA !important;
     font-size: 16px;
 }

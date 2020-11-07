@@ -28,7 +28,7 @@
 .ant-menu-item {
     height: 60px !important;
     align-items: center;
-    display: flex;
+    display: flex !important;
 }
 
 .ant-menu-item-selected {

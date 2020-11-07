@@ -7,7 +7,7 @@ import {LeftMenu} from "./components/LeftMenu/LeftMenu";
 import './App.css';
 
 export default function App() {
-    const [menuIndex, setMenuIndex] = useState(1);
+    const [menuIndex, setMenuIndex] = useState('2');
 
     // Вместо тяжелого редакса, думаю, здесь предпочтителен контекст.
     // Во всяком случае для задачи переключения страниц - его сейчас более, чем достаточно!

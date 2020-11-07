@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { Menu, Layout} from 'antd';
 import analytic_icon from '../../analytic_icon.svg';
 import analytic_active_icon from '../../analytic_active_icon.svg';
@@ -17,7 +17,7 @@ export const LeftMenu = () => {
     };
 
     const handleClick = e => {
-        setMenuIndex(+e.key);
+        setMenuIndex(e.key);
     }
 
     // Код выбора меню "тупой", но это пример. В идеале иконки вообще выносятся в иконочный шрифт, типа icomoon и подключаются оттуда, а цвет меняется классом
@@ -25,10 +25,10 @@ export const LeftMenu = () => {
     return (
         <Sider collapsible collapsed={collapsed} onCollapse={onCollapse} className={'left-menu'} width={300}>
             <Menu theme="light" defaultSelectedKeys={[menuIndex]} mode="inline" onClick={handleClick}>
-                <Menu.Item key="1" icon={<img src={menuIndex === 1 ? analytic_active_icon : analytic_icon} alt="" />}>
+                <Menu.Item key="1" icon={<img src={+menuIndex === 1 ? analytic_active_icon : analytic_icon} alt="" />}>
                     Аналитика
                 </Menu.Item>
-                <Menu.Item key="2" icon={<img src={menuIndex === 2 ? push_active_icon : push_icon} alt="" />}>
+                <Menu.Item key="2" icon={<img src={+menuIndex === 2 ? push_active_icon : push_icon} alt="" />}>
                     Уведомления
                 </Menu.Item>
             </Menu>
