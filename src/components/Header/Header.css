@@ -1,0 +1,23 @@
+.header__right-side .avatar {
+  background: #EEF1FA;
+  margin: 0 20px;
+}
+
+.header__right-side span {
+  color: #272D67;
+  font-size: 18px;
+}
+
+.header__right-side .ant-dropdown-link span {
+  color: #5285FF;
+}
+
+.App-header {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  color: #000;
+  padding: 20px 30px;
+}
