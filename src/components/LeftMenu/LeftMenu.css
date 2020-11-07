@@ -1,14 +1,14 @@
 .left-menu {
-    background: linear-gradient(180deg, rgba(240,243,252,1) 0%, rgba(255,255,255,1) 10%);
+    background: linear-gradient(180deg, rgba(240,243,252,1) 0%, rgba(255,255,255,1) 10%) !important;
     padding-top: 30px;
 }
 
-.ant-menu {
-    background: transparent;
+.ant-menu, .ant-layout-sider-children {
+    background: transparent !important;
 }
 
 .ant-layout-sider-trigger {
-    background: #EEF1FA;
+    background: #EEF1FA !important;
 }
 
 .ant-layout-sider-trigger span {
