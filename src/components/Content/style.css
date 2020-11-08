@@ -1,5 +1,5 @@
 .tab__container {
-    padding: 50px;
+    padding: 30px 50px;
 }
 
 .container {
@@ -43,6 +43,10 @@
     border: 1px solid #97A7CF !important;
     border-radius: 5px !important;
     padding: 14px !important;
+}
+
+.input.error {
+    border: 1px solid #DD1E25 !important;
 }
 
 .textarea {
@@ -101,8 +105,8 @@ label {
 
 .clear-icon.textarea-clear {
     position: absolute;
-    right: 15px;
-    top: 15px;
+    right: 22px;
+    top: 55px;
     font-size: 16px;
 }
 
@@ -118,4 +122,59 @@ label {
 
 .mobile_bg {
     z-index: 1;
+}
+.note__sample {
+    position: relative;
+    width: fit-content;
+}
+
+.note__subtitle {
+    color: #272D67;
+    font-size: 12px;
+}
+
+.note__title {
+    color: #676daa;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.note__card {
+    z-index: 2;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    position: absolute;
+    width: calc(100% - 60px);
+    left: 30px;
+    top: 70px;
+    box-shadow: 0px 10px 30px -1px rgba(103, 109, 170, 0.2);
+}
+
+.note__img {
+    background: #EEF1FA;
+    border-radius: 5px;
+    margin-right: 20px;
+    width: 64px;
+    height: 64px;
+}
+
+.send__button-wrap {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.send__button:hover {
+    background: #456ed2 !important;
+}
+
+.send__button {
+    background: #5285FF !important;
+    color: #fff !important;
+    border-radius: 5px !important;
+    /*padding: 10px 20px !important;*/
+    height: 55px !important;
+    width: 211px;
 }
