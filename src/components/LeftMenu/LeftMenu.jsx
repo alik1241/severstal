@@ -12,7 +12,8 @@ const { Sider } = Layout;
 export const LeftMenu = () => {
     const {menuIndex, setMenuIndex} = useContext(AppContext);
     const [collapsed, setCollapsed] = useState(false);
-    const onCollapse = collapsed => {
+    const onCollapse = (collapsed, type) => {
+        console.log(type)
         setCollapsed(collapsed);
     };
 
@@ -23,7 +24,16 @@ export const LeftMenu = () => {
     // Код выбора меню "тупой", но это пример. В идеале иконки вообще выносятся в иконочный шрифт, типа icomoon и подключаются оттуда, а цвет меняется классом
     // Сами меню приходят с бэка или формируются в массиве, а тут перебираются с помощью map и внутри подставляется активный класс на основе стейта
     return (
-        <Sider collapsible collapsed={collapsed} onCollapse={onCollapse} className={'left-menu'} width={300}>
+        <Sider
+            /*collapsible*/
+            collapsed={collapsed}
+            onCollapse={onCollapse}
+            className={'left-menu'}
+            width={300}
+            breakpoint="xl"
+            collapsedWidth="0"
+            // onCollapse={(e) => console.log(e)}
+        >
             <Menu theme="light" defaultSelectedKeys={[menuIndex]} mode="inline" onClick={handleClick}>
                 <Menu.Item key="1" icon={<img src={+menuIndex === 1 ? analytic_active_icon : analytic_icon} alt="" />}>
                     Аналитика

@@ -1,5 +1,7 @@
 .tab__container {
     padding: 30px 50px;
+    max-height: calc(100vh - 175px);
+    overflow: auto;
 }
 
 .container {
@@ -85,6 +87,12 @@
     justify-content: flex-end;
 }
 
+@media (max-width: 1199px) {
+    .upload__btn-wrap {
+        justify-content: flex-start;
+    }
+}
+
 .upload__button {
     background: #91A0C9 !important;
     border-radius: 5px !important;
@@ -123,6 +131,7 @@ label {
 .mobile_bg {
     z-index: 1;
 }
+
 .note__sample {
     position: relative;
     width: fit-content;
@@ -160,6 +169,11 @@ label {
     height: 64px;
 }
 
+.note__img img {
+    width: 64px;
+    height: 64px;
+}
+
 .send__button-wrap {
     display: flex !important;
     flex-direction: column;
@@ -177,4 +191,65 @@ label {
     /*padding: 10px 20px !important;*/
     height: 55px !important;
     width: 211px;
+}
+
+.ant-layout-sider-zero-width-trigger-left {
+    background: #5285FF !important;
+}
+
+@media (max-width: 1320px) {
+    .send__button {
+        margin-left: calc(50% - 105px);
+    }
+}
+
+@media (max-width: 1199px) {
+    .send__button {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .mobile_bg {
+        width: 315px;
+    }
+
+    .tab__container {
+        padding: 30px ;
+    }
+
+    .upload__note {
+        width: 150px;
+    }
+
+    .send__button-wrap {
+        margin-top: 30px;
+    }
+
+    .note__subtitle {
+        font-size: 10px;
+    }
+
+    .note__title {
+        font-size: 12px;
+    }
+
+    .note__card {
+
+    }
+
+    .note__img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .note__img img {
+        width: 32px;
+        height: 32px;
+
+    }
+
+    .tab__container {
+        max-height: calc(100vh - 222px);
+    }
 }

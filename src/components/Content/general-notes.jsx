@@ -120,7 +120,7 @@ export const GeneralNotesTab = () => {
                 // onFinish={validate}
             >
                 <Row gutter={[16, 24]}>
-                    <Col className="gutter-row" span={16}>
+                    <Col className="gutter-row" xxl={16} xl={16} lg={24} xs={24}>
                         <Form.Item
                             label="Название уведомления"
                             name={'noteName'}
@@ -147,7 +147,7 @@ export const GeneralNotesTab = () => {
                 </Row>
 
                 <Row gutter={[16, 24]}>
-                    <Col className="gutter-row" span={16}>
+                    <Col className="gutter-row" xxl={16} xl={16} lg={24} xs={24}>
                         <Form.Item
                             label="Текст уведомления"
                             name={'noteText'}
@@ -175,7 +175,7 @@ export const GeneralNotesTab = () => {
                 </Row>
 
                 <Row gutter={[16, 24]} wrap>
-                    <Col className="gutter-row" span={12}>
+                    <Col className="gutter-row" xxl={12} xl={12} lg={24} xs={24}>
                         <Form.Item
                             label="Прикрепить изображение"
                             name={'imgUrl'}
@@ -199,7 +199,7 @@ export const GeneralNotesTab = () => {
                             />
                         </Form.Item>
                     </Col>
-                    <Col className="gutter-row" span={4}>
+                    <Col className="gutter-row" xxl={4} xl={4} lg={6} md={6} xs={12}>
                         <div className={'upload__btn-wrap'}>
                             <Form.Item label=" ">
                                 <Upload {...props} fileList={uploadedData.fileList} onChange={handleChange} onRemove={removeFile}>
@@ -215,7 +215,7 @@ export const GeneralNotesTab = () => {
                             </Form.Item>
                         </div>
                     </Col>
-                    <Col className="gutter-row" span={6}>
+                    <Col className="gutter-row" xxl={6} xl={6} lg={18} md={18} xs={12}>
                         <Form.Item label=" ">
                             <span className={'upload__note'}>
                                 Значок в высоком  разрешении
@@ -226,7 +226,7 @@ export const GeneralNotesTab = () => {
                 </Row>
 
                 <Row>
-                    <Col className="gutter-row" span={12}>
+                    <Col className="gutter-row" xxl={12} xl={12} lg={14} md={24} sm={24} xs={24}>
                         <Form.Item label="Предпростмотр">
                             <div className={'note__sample'}>
                                 <img src={mobile_bg} className="mobile_bg" alt="" />
@@ -242,7 +242,7 @@ export const GeneralNotesTab = () => {
                             </div>
                         </Form.Item>
                     </Col>
-                    <Col className="gutter-row send__button-wrap" span={12}>
+                    <Col className="gutter-row send__button-wrap" xxl={12} xl={12} lg={10} md={24} sm={24} xs={24}>
                         <Form.Item label=" ">
                             <Button
                                 onClick={() => submit()}

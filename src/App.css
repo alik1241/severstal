@@ -15,8 +15,8 @@
 }
 
 .content {
-  min-height: calc(100vh - 90px);
-  max-height: calc(100vh - 90px);
-  overflow: auto;
+  /*min-height: calc(100vh - 140px);*/
+  /*max-height: calc(100vh - 90px);*/
+  /*overflow: auto;*/
   background: #F7F9FF;
 }
