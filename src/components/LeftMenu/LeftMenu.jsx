@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react';
 import { Menu, Layout} from 'antd';
-import analytic_icon from '../../analytic_icon.svg';
-import analytic_active_icon from '../../analytic_active_icon.svg';
-import push_icon from '../../push_icon.svg';
-import push_active_icon from '../../push_active_icon.svg';
+import analytic_icon from '../../img/analytic_icon.svg';
+import analytic_active_icon from '../../img/analytic_active_icon.svg';
+import push_icon from '../../img/push_icon.svg';
+import push_active_icon from '../../img/push_active_icon.svg';
 import { AppContext } from '../../services/AppContext';
 import './LeftMenu.css';
 

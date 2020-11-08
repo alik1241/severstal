@@ -40,11 +40,17 @@
 }
 
 .input {
-
+    border: 1px solid #97A7CF !important;
+    border-radius: 5px !important;
+    padding: 14px !important;
 }
 
 .textarea {
     resize: none;
+}
+
+.input::placeholder, .input input::placeholder {
+    color: #91A0C9 !important;
 }
 
 .flex-wrap {
@@ -75,7 +81,41 @@
     justify-content: flex-end;
 }
 
+.upload__button {
+    background: #91A0C9 !important;
+    border-radius: 5px !important;
+    color: #fff !important;
+    height: 55px !important;
+    font-size: 16px !important;
+    padding: 10px 30px !important;
+}
+
+.upload__button .anticon-download {
+    font-size: 20px !important;
+}
+
 label {
     color: #676DAA !important;
     font-size: 16px;
+}
+
+.clear-icon.textarea-clear {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 16px;
+}
+
+.clear-icon {
+    color: #E0E7F8 !important;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.clear-icon:hover {
+    color: #91A0C9 !important;
+}
+
+.mobile_bg {
+    z-index: 1;
 }

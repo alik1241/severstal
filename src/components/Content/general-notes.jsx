@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Row, Col, Layout, Form, Input, Button, Upload, message, Typography } from 'antd';
-import { DownloadOutlined } from '@ant-design/icons';
+import { DownloadOutlined, CloseOutlined } from '@ant-design/icons';
+import mobile_bg from '../../img/mobile_bg.svg';
 import './style.css';
 
 const { Content } = Layout;
@@ -33,7 +34,19 @@ const props = {
     },
 };
 
+const setInput = (e, setter) => {
+    setter(e.target.value);
+}
+
+//allowClear
+const renderSuffix = (inputValue, clearCallback, textArea) => {
+    return inputValue !== '' ? <CloseOutlined className={`clear-icon ${textArea ? 'textarea-clear' : ''}`} onClick={() => clearCallback('')} /> : <span />;
+}
+
 export const GeneralNotesTab = () => {
+    const [noteName, setNoteName] = useState('');
+    const [noteText, setNoteText] = useState('');
+    const [imgUrl, setImgUrl] = useState('');
     const [form] = Form.useForm();
 
     return (
@@ -47,7 +60,14 @@ export const GeneralNotesTab = () => {
                 <Row gutter={[16, 24]}>
                     <Col className="gutter-row" span={16}>
                         <Form.Item label="Название уведомления">
-                            <Input placeholder="Укажите текст заголовка" allowClear />
+                            <Input
+                                placeholder="Укажите текст заголовка"
+                                className={'input'}
+                                size={'large'}
+                                value={noteName}
+                                onChange={(e) => setInput(e, setNoteName)}
+                                suffix={renderSuffix(noteName, setNoteName)}
+                            />
                         </Form.Item>
                     </Col>
                 </Row>
@@ -55,22 +75,37 @@ export const GeneralNotesTab = () => {
                 <Row gutter={[16, 24]}>
                     <Col className="gutter-row" span={16}>
                         <Form.Item label="Текст уведомления">
-                            <TextArea rows={4} placeholder="Введите текст уведомления" allowClear className={'input textarea'} />
+                            <TextArea
+                                rows={4}
+                                placeholder="Введите текст уведомления"
+                                className={'input textarea'}
+                                size={'large'}
+                                value={noteText}
+                                onChange={(e) => setInput(e, setNoteText)}
+                            />
+                            { renderSuffix(noteText, setNoteText, true) }
                         </Form.Item>
                     </Col>
                 </Row>
 
                 <Row gutter={[16, 24]} wrap>
-                    <Col className="gutter-row" span={13}>
+                    <Col className="gutter-row" span={12}>
                         <Form.Item label="Прикрепить изображение">
-                            <Input placeholder="Укажите прямую ссылку на изображение" allowClear />
+                            <Input
+                                placeholder="Укажите прямую ссылку на изображение"
+                                className={'input'}
+                                size={'large'}
+                                value={imgUrl}
+                                onChange={(e) => setInput(e, setImgUrl)}
+                                suffix={renderSuffix(imgUrl, setImgUrl)}
+                            />
                         </Form.Item>
                     </Col>
-                    <Col className="gutter-row" span={3}>
+                    <Col className="gutter-row" span={4}>
                         <div className={'upload__btn-wrap'}>
                             <Form.Item label=" ">
                                 <Upload {...props}>
-                                    <Button icon={<DownloadOutlined />}>Обзор</Button>
+                                    <Button icon={<DownloadOutlined />} size={'large'} className={'upload__button'}>Обзор</Button>
                                 </Upload>
                             </Form.Item>
                         </div>
@@ -88,6 +123,9 @@ export const GeneralNotesTab = () => {
                 <Form.Item>
                     <Button type="primary">Submit</Button>
                 </Form.Item>
+                <div>
+                    <img src={mobile_bg} className="mobile_bg" alt="" />
+                </div>
             </Form>
         </Content>
     );

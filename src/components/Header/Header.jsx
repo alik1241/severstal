@@ -1,4 +1,4 @@
-import logo from '../../logo.svg';
+import logo from '../../img/logo.svg';
 import { Typography, Avatar, Menu, Dropdown } from 'antd';
 import { CaretDownOutlined } from '@ant-design/icons';
 import './Header.css';
