@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/severstal/static/css/main.54054885.chunk.css",
+    "main.js": "/severstal/static/js/main.2ea0a6fa.chunk.js",
+    "main.js.map": "/severstal/static/js/main.2ea0a6fa.chunk.js.map",
+    "runtime-main.js": "/severstal/static/js/runtime-main.0630051a.js",
+    "runtime-main.js.map": "/severstal/static/js/runtime-main.0630051a.js.map",
+    "static/css/2.617c3bb8.chunk.css": "/severstal/static/css/2.617c3bb8.chunk.css",
+    "static/js/2.f1f10ab1.chunk.js": "/severstal/static/js/2.f1f10ab1.chunk.js",
+    "static/js/2.f1f10ab1.chunk.js.map": "/severstal/static/js/2.f1f10ab1.chunk.js.map",
+    "static/js/3.7207df58.chunk.js": "/severstal/static/js/3.7207df58.chunk.js",
+    "static/js/3.7207df58.chunk.js.map": "/severstal/static/js/3.7207df58.chunk.js.map",
+    "index.html": "/severstal/index.html",
+    "static/css/2.617c3bb8.chunk.css.map": "/severstal/static/css/2.617c3bb8.chunk.css.map",
+    "static/css/main.54054885.chunk.css.map": "/severstal/static/css/main.54054885.chunk.css.map",
+    "static/js/2.f1f10ab1.chunk.js.LICENSE.txt": "/severstal/static/js/2.f1f10ab1.chunk.js.LICENSE.txt",
+    "static/media/analytic_active_icon.0cc2b43c.svg": "/severstal/static/media/analytic_active_icon.0cc2b43c.svg",
+    "static/media/analytic_icon.e184bc24.svg": "/severstal/static/media/analytic_icon.e184bc24.svg",
+    "static/media/logo.72481bc4.svg": "/severstal/static/media/logo.72481bc4.svg",
+    "static/media/mobile_bg.421d0223.svg": "/severstal/static/media/mobile_bg.421d0223.svg",
+    "static/media/push_active_icon.ffc3ca97.svg": "/severstal/static/media/push_active_icon.ffc3ca97.svg",
+    "static/media/push_icon.32c5a28e.svg": "/severstal/static/media/push_icon.32c5a28e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0630051a.js",
+    "static/css/2.617c3bb8.chunk.css",
+    "static/js/2.f1f10ab1.chunk.js",
+    "static/css/main.54054885.chunk.css",
+    "static/js/main.2ea0a6fa.chunk.js"
+  ]
+}
