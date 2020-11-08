@@ -42,7 +42,8 @@ const props = {
     },
 };
 
-//allowClear
+// К вопросу о компромисах дизайна. Данная функция из коробки подключается за 5 секунд для всех полей с помощью allowClear
+// Но из-за кастомной иконки в дизайне и невозможности подменить иконку в фреймворке - пришлось собирать свой велосипед и это доп. время
 const renderSuffix = (inputValue, clearCallback, textArea) => {
     return inputValue !== '' ? <CloseOutlined className={`clear-icon ${textArea ? 'textarea-clear' : ''}`} onClick={() => clearCallback('')} /> : <span />;
 }
@@ -97,6 +98,12 @@ export const GeneralNotesTab = () => {
         }
     }
 
+    const clearFormField = (name) => {
+        const fields = form.getFieldsValue();
+        fields[name] = '';
+        form.setFieldsValue(fields);
+    }
+
     const submit = () => {
         if (!validate(form)) {
             openNotification();
@@ -125,7 +132,15 @@ export const GeneralNotesTab = () => {
                                 size={'large'}
                                 value={noteName}
                                 onChange={(e) => setInput(e, setNoteName)}
-                                suffix={renderSuffix(noteName, setNoteName)}
+                                suffix={
+                                    renderSuffix(
+                                        noteName,
+                                        () => {
+                                            setNoteName('');
+                                            clearFormField('noteName');
+                                        }
+                                     )
+                                }
                             />
                         </Form.Item>
                     </Col>
@@ -147,7 +162,15 @@ export const GeneralNotesTab = () => {
                                 onChange={(e) => setInput(e, setNoteText)}
                             />
                         </Form.Item>
-                        { renderSuffix(noteText, setNoteText, true) }
+                        { renderSuffix(
+                            noteText,
+                            () => {
+                                setNoteText('');
+                                clearFormField('noteText');
+                            },
+                            true
+                            )
+                        }
                     </Col>
                 </Row>
 
@@ -164,7 +187,15 @@ export const GeneralNotesTab = () => {
                                 size={'large'}
                                 value={imgUrl}
                                 onChange={(e) => setInput(e, setImgUrl)}
-                                suffix={renderSuffix(imgUrl, setImgUrl)}
+                                suffix={
+                                    renderSuffix(
+                                        imgUrl,
+                                        () => {
+                                            setImgUrl('');
+                                            clearFormField('imgUrl');
+                                        }
+                                    )
+                                }
                             />
                         </Form.Item>
                     </Col>
